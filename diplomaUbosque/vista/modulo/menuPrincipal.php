@@ -49,13 +49,12 @@
     </div>
     <div class="panel-group col-sm-12 col-xs-12">
       <div class="panel panel-default">
-       
         <div class="panel-body" id="divFrmCargar">
             <div class="col-sm-6">
               <button type="button" class="btn btn-block btn-info glyphicon   glyphicon glyphicon-star-empty" id="btnAccion"> </button>  
             </div>
             <div class="col-sm-6">
-              <button class="btn btn-block btn-danger">Regresar</button>  
+              <button class="btn btn-block btn-danger" id="regresaMenu">Regresar</button>
             </div> 
         </div>     
       </div> 

@@ -6,10 +6,7 @@
 	<title>Menu Certificacion Univensidad El bosque</title>
 	<link rel="ico" href="Img/ico/image001.ico">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<link rel="stylesheet" href="../../FrameWorks/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../../FrameWorks/dataTables/datatables.net-bs/css/dataTables.bootstrap.min.css">
-	<link rel="stylesheet" href="../../FrameWorks/alertify/alertify.core.css">
-	<link rel="stylesheet" href="../../FrameWorks/alertify/alertify.default.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="estilos/personalizado.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -23,11 +20,12 @@
 			}
 		?>
 	</div>
-	<script type="text/javascript" src="../../FrameWorks/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="../../FrameWorks/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../../FrameWorks/dataTables/datatables.net/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src="../../FrameWorks/dataTables/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-	<script type="text/javascript" src="../../FrameWorks/alertify/alertify.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	<script type="text/javascript" src="js/main.js"></script>	
 
 </body>

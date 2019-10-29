@@ -32,6 +32,10 @@ $(function(){
 		}
 	});
 
+	$('#regresaMenu').on('click',function(){
+		$('#panelMenu').fadeIn( "slow", function() {});
+		$('#slideFormulario').fadeOut( "slow", function() {});
+	});
 
 	function deslizaPanelMenu(movimiento) {
 		switch(movimiento) {
