@@ -50,24 +50,8 @@ $(function(){
 		$('#panelMenu').fadeIn( "slow", function() {});
 		$('#slideFormulario').fadeOut( "slow", function() {});
 	});
-	/*funcion typehead para buscar con ajax en base de datos*/
-	$('#country').typeahead({
-		  source: function(query, result){
-		   $.ajax({
-		    url:"fetch.php",
-		    method:"POST",
-		    data:{query:query},
-		    dataType:"json",
-		    success:function(data)
-		    {
-		     result($.map(data, function(item){
-		      return item;
-		     }));
-		    }
-		   })
-		  }
-	 });
-	/**/
+
+	//funciones de movimiento de menu
 	function deslizaPanelMenu(movimiento) {
 		switch(movimiento) {
 		  case 'adelante':
@@ -81,4 +65,6 @@ $(function(){
 		    var url='';
 		}
 	}
+
 });
+

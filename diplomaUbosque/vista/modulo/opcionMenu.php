@@ -1,6 +1,6 @@
 <?php
 ?>
-<form action="#" method="post" id="frmOpcion">
+<form action="#" method="post" id="frmOpcion" enctype="multipart/form-data">
     <div class="container-fluid" id="slideFormulario">
         <div class="panel-group col-sm-12 col-xs-12">
             <div class="panel panel-primary">
@@ -26,7 +26,7 @@
         </div>
         <div class="panel-group col-sm-12 col-xs-12">
             <div class="panel panel-default">
-                <div class="panel-body" id="divFrmCargar">
+                <div class="panel-body" id="divFrmCargar" style="width: 99_%;">
                     <div class="col-sm-6">
                         <button type="button" class="btn btn-block btn-info glyphicon glyphicon glyphicon-star-empty" id="btnAccion"> </button>
                     </div>
