@@ -1,17 +1,13 @@
 $(function(){
-	//$("#slideFormulario").hide();/*pendiente ocultar*/
-
-	$("#slideFormulario").hide();/*pendiente ocultar*/
-	$('#frmCertificado').find('input, textarea, button, select').prop('disabled',true);
 
 	$('.ir').on('click',function(){
-		$('#panelMenu').fadeOut( "slow", function() {});
-		$('#slideFormulario').fadeIn( "slow", function() {});
-		$('#frmCertificado').find('input, textarea, button, select').prop('disabled',false);
+		$('#panelMenu').toggle( "slow");
+		$('#slideFormulario').fadeIn( "slow");
+		//$('#frmCertificado').find('input, textarea, button, select').prop('disabled',false);
 		const accion = $(this).attr('id');
 		switch(accion) {
 		  case 'btnCrear':
-		  	deslizaPanelMenu('adelante');
+		  	
 		  	$('#btnAccion').text('generar');
 		  	$('#btnAccion').attr('value','generar');
 		  	$("#encabezadoFrm").text('Parametrizacion para generar un Diploma');
@@ -45,26 +41,13 @@ $(function(){
 			$('#divFrmCargar').load(url);
 		}
 	});
-
+	//acciones boton regresar
 	$('#regresaMenu').on('click',function(){
-		$('#panelMenu').fadeIn( "slow", function() {});
-		$('#slideFormulario').fadeOut( "slow", function() {});
+		$('#panelMenu').toggle( "slow");
+		$('#slideFormulario').toggle( "slow");
 	});
+	//acciones boton regresar
 
-	//funciones de movimiento de menu
-	function deslizaPanelMenu(movimiento) {
-		switch(movimiento) {
-		  case 'adelante':
-		  		$('#panelMenu').fadeOut(2000,'slow', function() {});
-		    break;
-		  case 'atras':
-		  		$('#panelMenu').fadeIn('slow/400/fast', function() {});
-		    var url='';
-		    break;
-		  default:
-		    var url='';
-		}
-	}
 
 });
 
