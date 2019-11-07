@@ -25,7 +25,7 @@ $(function(){
 		  	$('#btnAccion').attr('value','cargar');
 		  	$("#encabezadoFrm").text('Cargar asistentes a un diploma');
 
-		    var url='ajax/cargaAsistenteDiplomaAjax.php';
+		    var url='ajax/menuAsistenteDiplomaAjax.php';
 		    break;		    		    
 		  case 'btnHistorialDiploma':
 		  		$('#btnAccion').text('consultar');
@@ -41,13 +41,57 @@ $(function(){
 			$('#divFrmCargar').load(url);
 		}
 	});
+
 	//acciones boton regresar
 	$('#regresaMenu').on('click',function(){
 		$('#panelMenu').toggle( "slow");
 		$('#slideFormulario').toggle( "slow");
 	});
 	//acciones boton regresar
+	/*envio de formulario*/
+	 $("#btnAccion").on('click',function(){
+	 	
+		if(validaForm()){ 
+		var select = $('#selectDiplomas').val();
+		var file = $('#file').val();
+		var data = "seleccion="+select+"&files="+file;
+		//console.log(select);
+		var url = "ajax/cargaAsistenteDiplomaAjax.php";
+			$.ajax({
+			   type: "POST",                 
+			   url: url,                    
+			   data:data,
+			   success: function(data)            
+			   {
+				 $('#resp').html(data);           
+			   }
+			 });
+		}else{
+			 console.log("pilas");
+	    }select
+	 });
+	/*fin envio formulario*/
+
+/*valida formulario campos*/
+function validaForm(){
+    // Campos de texto
+    var seleccion =  $("#selectDiplomas").val();
+    var archivo =  $("#file").val(); 
+    if(seleccion == null){
+        $("#selectDiplomas").focus();       // Esta función coloca el foco de escritura del usuario en el campo Nombre directamente.
+        return false;
+    }
+    if(archivo == ''){
+    	alert("Seleccione el archivo");
+        $("#file").focus();
+        return false;
+      
+    }
+    return true; // Si todo está correcto
+}
+/*Fin valida formulario campos*/
 
 
 });
+
 

@@ -1,6 +1,6 @@
 <?php
 ?>
-<form action="#" method="post" id="slideFormulario" hidden="" enctype="multipart/form-data">
+<form method="post" id="slideFormulario" hidden="" enctype="multipart/form-data">
     <div class="container-fluid" >
         <div class="panel-group col-sm-12 col-xs-12">
             <div class="panel panel-primary">

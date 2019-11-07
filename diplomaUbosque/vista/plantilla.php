@@ -30,6 +30,7 @@
     <script src="../../frames/fileinput.min.js"></script>
 
     <script src="js/main.js"></script>
+    <!--<script src="js/cargaAsistentesDiploma.js"></script>-->
 
 </body>
 </html>
