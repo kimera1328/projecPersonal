@@ -51,9 +51,9 @@ $(function(){
 	/*envio de formulario*/
 	 $("#btnAccion").on('click',function(e){
 	 	//if(validaForm()){
-		var select = $('#selectDiplomas').val();
-		var file = $('#file').val();
-		var data = "seleccion="+select+"&files="+file;
+		//var select = $('#selectDiplomas').val();
+		//var file = $('#file').val();
+		//var data = "seleccion="+select+"&files="+file;
 				event.preventDefault();
 				$.ajax({
 					type: 'POST',
@@ -63,7 +63,7 @@ $(function(){
 					contentType: false,
 					cache: false,
 					processData:false,
-					beforeSend: function(){
+					beforeSend: function(data){
 						$('#btnAccion').attr("disabled","disabled");
 						$('#slideFormulario').css("opacity",".5");
 					},

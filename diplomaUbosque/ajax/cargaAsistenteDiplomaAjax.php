@@ -1,5 +1,5 @@
 <?php 
-$idDiploma = $_POST["seleccion"];
+echo $_FILES["fileAsistente"]["name"];
 if(isset($_POST['buscar']) &&  isset($_FILES)){
     $idDiploma = $_POST["idDiploma"];
     /*Procesamos el file*/

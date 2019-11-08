@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <input id="file" type="file"  class="file" name="file" data-preview-file-type="any" required=”required”>
+                <input id="file" type="file"  class="file" name="fileAsistente" data-preview-file-type="any" required=”required”>
            </div>
         </div>
      </form>
