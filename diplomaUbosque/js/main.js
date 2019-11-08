@@ -49,26 +49,41 @@ $(function(){
 	});
 	//acciones boton regresar
 	/*envio de formulario*/
-	 $("#btnAccion").on('click',function(){
-	 	
-		if(validaForm()){ 
+	 $("#btnAccion").on('click',function(e){
+	 	//if(validaForm()){
 		var select = $('#selectDiplomas').val();
 		var file = $('#file').val();
 		var data = "seleccion="+select+"&files="+file;
-		//console.log(select);
-		var url = "ajax/cargaAsistenteDiplomaAjax.php";
-			$.ajax({
-			   type: "POST",                 
-			   url: url,                    
-			   data:data,
-			   success: function(data)            
-			   {
-				 $('#resp').html(data);           
-			   }
-			 });
-		}else{
-			 console.log("pilas");
-	    }select
+				event.preventDefault();
+				$.ajax({
+					type: 'POST',
+					url: 'ajax/cargaAsistenteDiplomaAjax.php',
+					data: new FormData(document.getElementById('slideFormulario')),
+					dataType: 'json',
+					contentType: false,
+					cache: false,
+					processData:false,
+					beforeSend: function(){
+						$('#btnAccion').attr("disabled","disabled");
+						$('#slideFormulario').css("opacity",".5");
+					},
+					success: function(response){ //console.log(response);
+						$('.statusMsg').html('');
+						if(response.status == 1){
+							$('#slideFormulario')[0].reset();
+							$('.statusMsg').html('<p class="alert alert-success">'+response.message+'</p>');
+						}else{
+							$('.statusMsg').html('<p class="alert alert-danger">'+response.message+'</p>');
+						}
+						$('#slideFormulario').css("opacity","");
+						$("#btnAccion").removeAttr("disabled");
+					}
+				});
+
+
+		//}else{
+		//	 console.log("pilas");
+	    //}
 	 });
 	/*fin envio formulario*/
 
