@@ -10,7 +10,7 @@
             <div class="form-group">
                 <div style="width: 100%;">
                     <label>Nombre Del Diploma</label>
-                    <select class="form-control" id="selectDiplomas" name="state" required=”required”>
+                    <select class="form-control" id="selectDiplomas" name="diploma" required=”required”>
                         <option value="" disabled selected>Seleccion</option>
                         <?php
                         foreach ($cnsDiplomas as $key => $value) {

@@ -28,7 +28,7 @@
             <div class="panel panel-default">
                 <div class="panel-body" id="divFrmCargar" style="width: 99_%;">
                     <div class="col-sm-6">
-                        <button type="button" class="btn btn-block btn-info glyphicon glyphicon glyphicon-star-empty" id="btnAccion"> </button>
+                        <button type="button" class="btn btn-block btn-info glyphicon glyphicon glyphicon-star-empty" name="buscar" id="btnAccion"> </button>
                     </div>
                     <div class="col-sm-6">
                         <button class="btn btn-block btn-danger" id="regresaMenu">Regresar</button>

@@ -9,6 +9,7 @@
     <link href="../../frames/select2.min.css" rel="stylesheet" />
     <link href="../../frames/fileinput.min.css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="estilos/personalizado.css">
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="container-fluid">
