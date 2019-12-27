@@ -2,12 +2,12 @@ $(function(){
 
 	$('.ir').on('click',function(){
 		$('#panelMenu').toggle( "slow");
-		$('#slideFormulario').fadeIn( "slow");
+		$('#opcionMenu').toggle();
+		//$('#slideFormulario').fadeIn( "slow");
 		//$('#frmCertificado').find('input, textarea, button, select').prop('disabled',false);
 		const accion = $(this).attr('id');
 		switch(accion) {
 		  case 'btnCrear':
-		  	
 		  	$('#btnAccion').text('generar');
 		  	$('#btnAccion').attr('value','generar');
 		  	$("#encabezadoFrm").text('Parametrizacion para generar un Diploma');
@@ -45,7 +45,7 @@ $(function(){
 	//acciones boton regresar
 	$('#regresaMenu').on('click',function(){
 		$('#panelMenu').toggle( "slow");
-		$('#slideFormulario').toggle( "slow");
+		$('#opcionMenu').toggle();
 	});
 	//acciones boton regresar
 	/*envio de formulario*/

@@ -15,17 +15,16 @@ class diplomaModelo{
               WHERE documentoasistente= '".$documentoAsistente."'";
         return $db->GetAll($sql);
     }
-
-    public function mdlRevisaAsistenteDiploma($numeroDocumento,$idDiploma){
+    public function mdlAsistenteDiploma($documentoAsistente,$diploma){
         $db=Factory::createDbo();
-        $sql="SELECT a.idasistente
-              FROM asistente a, asistentediploma ad
-              WHERE   a.idasistente = ad.idasistente AND
-                      a.documentoasistente = '".$numeroDocumento."' AND
-                      ad.iddiploma = '".$idDiploma."' AND
-                      ad.codigoestado=100;";
+        $sql="SELECT *
+              FROM asistentediploma ad,asistente a 
+              WHERE a.idasistente = ad.idasistente AND 
+                    ad.iddiploma='".$diploma."' AND
+                    a.documentoasistente= '".$documentoAsistente."'";
         return $db->GetAll($sql);
     }
+
     public function mdlActualizaAsistente($idAsistente,$nombreAsistente,$apellidosAsistente,$tipodocumento){
         $db=Factory::createDbo();
         $sql="UPDATE asistente 
@@ -53,7 +52,7 @@ class diplomaModelo{
     }
     public function mdlInserAsistenteDiploma($idAsistente,$idDiploma){
         $db=Factory::createDbo();
-        $sql="INSERT INTO asistentediploma (idasistente, iddiploma, codigoestado)
+       echo "<br>". $sql="INSERT INTO asistentediploma (idasistente, iddiploma, codigoestado)
               VALUES ('".$idAsistente."', '".$idDiploma."', '100')";
         return $db->Execute($sql);
     }
