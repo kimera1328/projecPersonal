@@ -23,7 +23,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <input id="file" type="file"  class="file" name="fileAsistente" data-preview-file-type="any" required=”required”>
+                <!--<input id="file" type="file"  class="file" name="fileAsistente" data-preview-file-type="any" required=”required”>-->
+                <input id="file" name="file" type="file" class="file" data-show-preview="false" >
            </div>
         </div>
      </form>
@@ -45,11 +46,22 @@
                       },
                                           
                     });
-                    $("#divFrmCargar #file").fileinput();
+                    $("#divFrmCargar #file").fileinput({
+                        msgPlaceholder: "Archivo asistentes excel",
+                        browseClass: "btn btn-success",
+                        browseLabel: "Excel",
+                        removeClass: "btn btn-danger",
+                        removeLabel: "Borrar",
+                        removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> ",
+                        uploadClass: "btn btn-info",
+                        uploadLabel: "Actualizar",
+                        uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> ",
+                        allowedFileExtensions: ["xls", "xlsx"]
+                    });
                     /*CONFIGURACION SELEC2 Y  INPUTFILE*/
                     /*######################################################################################*/
                
              });
     </script>
-    <div class="statusMsg">.</div>
+
 </div>

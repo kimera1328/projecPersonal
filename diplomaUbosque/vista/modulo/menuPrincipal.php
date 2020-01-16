@@ -2,7 +2,7 @@
   <h2>Menu</h2>
   <h4>CERTIFICADOS UNIVERSIDAD EL BOSQUE</h4>
 </div>
-<div class="container" id="panelMenu">
+<div class="container-fluid" id="panelMenu">
     <div class="panel-group col-sm-6 col-xs-12"> 
       <div class="panel panel-info" id="panel1">
         <div class="panel-heading">Generar Certificado</div>

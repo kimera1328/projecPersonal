@@ -52,9 +52,11 @@ class diplomaModelo{
     }
     public function mdlInserAsistenteDiploma($idAsistente,$idDiploma){
         $db=Factory::createDbo();
-       echo "<br>". $sql="INSERT INTO asistentediploma (idasistente, iddiploma, codigoestado)
+        $sql="INSERT INTO asistentediploma (idasistente, iddiploma, codigoestado)
               VALUES ('".$idAsistente."', '".$idDiploma."', '100')";
-        return $db->Execute($sql);
+        $consulta = $db->Execute($sql);
+        $resultado = $db->affected_rows($consulta);
+        return $resultado;
     }
 
 

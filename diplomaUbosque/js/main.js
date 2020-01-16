@@ -11,7 +11,7 @@ $(function(){
 		  	$('#btnAccion').text('generar');
 		  	$('#btnAccion').attr('value','generar');
 		  	$("#encabezadoFrm").text('Parametrizacion para generar un Diploma');
-		    var url='';
+		  	var url='ajax/generaDiplomaAjax.php';
 		    break;
 		  case 'btnPreVisualizar':
 		  	$('#btnAccion').text('visualizar');
@@ -55,28 +55,28 @@ $(function(){
 		//var file = $('#file').val();
 		//var data = "seleccion="+select+"&files="+file;
 				event.preventDefault();
+		 var form_data = new FormData(document.getElementById("slideFormulario"));
 				$.ajax({
 					type: 'POST',
 					url: 'ajax/cargaAsistenteDiplomaAjax.php',
-					data: new FormData(document.getElementById('slideFormulario')),
+					data: form_data,
 					dataType: 'json',
 					contentType: false,
 					cache: false,
 					processData:false,
-					beforeSend: function(data){
+					/*beforeSend: function(data){
 						$('#btnAccion').attr("disabled","disabled");
 						$('#slideFormulario').css("opacity",".5");
-					},
+						alert('asda');
+					},*/
 					success: function(response){ //console.log(response);
-						$('.statusMsg').html('');
-						if(response.status == 1){
-							$('#slideFormulario')[0].reset();
-							$('.statusMsg').html('<p class="alert alert-success">'+response.message+'</p>');
+						if(response == 1){
+							swal("OK!", "Asistente agregado Correctamente Nombre: ", "success");
+							//$('.statusMsg').html('<p class="alert alert-success">'+response.message+'</p>');
 						}else{
-							$('.statusMsg').html('<p class="alert alert-danger">'+response.message+'</p>');
+							swal("Alerta!", "Asistente agregado Correctamente Nombre: ", "arror");
 						}
-						$('#slideFormulario').css("opacity","");
-						$("#btnAccion").removeAttr("disabled");
+
 					}
 				});
 
