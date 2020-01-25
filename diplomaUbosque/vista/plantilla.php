@@ -30,6 +30,8 @@
     <script type="text/javascript" src="../../frames/sweetalert.min.js"></script>
 
     <script src="js/main.js"></script>
+    <script src="js/generaDiploma.js"></script>
+
     <!--<script src="js/cargaAsistentesDiploma.js"></script>-->
 
 </body>
